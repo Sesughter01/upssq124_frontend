@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg_light{
+    background-color: aqua;
+}
+.bg_dark{
+    background-color:black;
+}
+.bg_med{
+    background-color: grey;
+}
+.color_light_text{
+    color: aliceblue;
+}
+.pad_3{
+    padding: 3rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:576px){
+    .bg_light{
+        background-color: red;
+    }
+
+    .bg_dark{
+        background-color:blue;
+    }
+
+    .bg_med{
+        background-color: green;
+    }
+}

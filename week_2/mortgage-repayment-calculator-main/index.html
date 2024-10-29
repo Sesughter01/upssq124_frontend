@@ -5,57 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/index.css">
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+   
 </head>
 <body>
+   <section class="top_section p_all">
+    <h2 class="top_title_color mtop_bottom">Mortgage Calculator</h2>
+    <a href="#" class="top_light_color">Clear All</a>
+   
+    <form >
+      <div class="mortgage_amt">
+        <p class="mortgage_amt_title mtop_bottom top_medium_color fs_500">Mortgage Amount</p>
+        <div class="input_container">
+          <span class="usd_currency center_icon round_left">
+             $
+          </span>
+          <input type="text" id="mortgage_amt" >
 
-  Mortgage Calculator
-  Clear All
+        </div>
 
-  Mortgage Amount
+      </div>
+    
+   
+       <div class="mortgage_trm">
+        <p class="mtop_bottom top_medium_color fs_500">Mortgage Term</p>
+       
+        <div class="input_container">
+          <span class="years order_right center_icon round_right">
+             years
+          </span>
+          <input type="text" id="mortgage_trm" >
 
-  Mortgage Term
+        </div>
 
-  Interest Rate
+      </div>
+      <div class="int_rate">
+        <p class="mtop_bottom top_medium_color fs_500">Interest Rate</p>
+       
+        <div class="input_container">
+          <span class="percentage order_right center_icon round_right">
+             %
+          </span>
+          <input type="text" id="int_rate" >
 
-  Mortgage Type
-  Repayment
-  Interest Only
+        </div>
 
-  Calculate Repayments
+      </div>
+      
+    
+      <div class="mortgage_type">
+        <p class="mtop_bottom top_medium_color fs_500">Mortgage Type</p>
+        <!-- <div class="mtop_bottom"> -->
+         
+          <div class="input_container mtop_bottom">
+            <label class="repay radio_padding">
+              <input type="radio" class="remove_border " name="mortgage_type" id="interest_only" value="Interest Only">
+            </label>
+            <span class="radio_title top_medium_color fs_500">Repayment</span>
 
-  <!-- Empty results start -->
+          </div>
+    
+        <!-- </div> -->
+        <div class=" input_container">
+      
+            <label class="interst radio_padding">
+              <input type="radio" class="remove_border" name="mortgage_type" id="interest_only" value="Interest Only">
 
-  Results shown here
+            </label>
+            <span class="radio_title top_medium_color fs_500">
+                Interest Only
+            </span>
+          
+    
+        </div>
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
+      </div>
+        
+    
+      <button class="btn mtop_bottom round_all_btn p_all" type="button">
+           <span><img src="./assets/images/icon-calculator.svg" alt=""></span>  
+            <span class="fs_700">Calculate Repayment</span> 
+      </button>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+
+    </form>
+
+
+
+
+    
+   
+    
+  
+    
+   </section>
+   <section class="bottom_section p_all">
+           <!-- Empty results start -->
+      <div class="bottom_text_content">
+        <h3 class="bottom_title mtop_bottom">Your Results</h3> 
+        <p class="bottom_text_paragraph mblock_bottom">Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.
+        
+        </p>
+
+      </div>
+      <div class="bottom_payment_card p_all">
+        <p class="mblock_bottom bottom_card_text">Your monthly repayments</p>
+
+        <h1 class="bottom_currency_amt mtop_bottom"><span>#</span>1,797.74</h1>
+        <hr>
+        <p class="mtop_bottom bottom_card_text"> 
+          Total you'll repay over the term 
+        </p>
+        <h3><span>#</span>539,322.94</h3>
+
+      </div>
+
+      
+      
+
+       
+
+        
+   </section>
+  
+
+
+
+
 </body>
 </html>

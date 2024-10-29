@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Universal selector *  
+    selects every element in the html file
+*/
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+.top_title_color{
+    color: hsl(202, 55%, 16%);
+}
+.fs_500{
+    font-weight: 500;
+}
+.fs_700{
+    font-weight: 700;
+}
+
+.top_light_color{
+    color: hsl(200, 26%, 54%);
+}
+.top_dark_color{
+    color: hsl(202, 55%, 16%);
+}
+.p_all{
+    padding: 1rem;
+}
+.mortgage_amt{
+    margin-block: 1rem;
+}
+.mtop_bottom{
+    margin-block: 1rem;
+}
+.mblock_bottom{
+    margin-block-end: 1rem;
+}
+.input_container{
+    display: flex;
+    border-radius: 8px;
+    border: 1.5px solid hsl(200, 24%, 40%);
+   
+}
+.center_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(202, 86%, 94%);
+
+}
+
+.round_left{
+    border-radius: 8px 0 0 8px;
+
+}
+.round_right{
+    border-radius: 0 8px 8px 0;
+
+}
+.round_all{
+    border-radius: 8px;
+}
+.round_all_btn{
+    border-radius: 25px;
+}
+
+.usd_currency{
+    /* position: absolute;
+    top: 0;
+    bottom: 0; */
+    width: 2.5rem;
+   
+    
+
+}
+.order_right{
+    order: 1;
+
+}
+.years{
+  
+    width: 4.0rem;
+ 
+   
+
+}
+.percentage{
+  
+   
+  
+    width: 2.5rem;
+ 
+   
+}
+input{
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+   
+    
+}
+
+
+
+input[type="text"]:focus{
+
+    outline: none;
+}
+
+
+.radio{
+ 
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+
+.radio_title{
+    margin-inline-start: 1rem;
+    padding-block: 1rem;
+}
+.radio_padding{
+    padding: 1rem;
+}
+
+/* input[type="radio"]{
+    padding: 1rem;
+} */
+.remove_border{
+    border: none;
+}
+
+/* SUBMIT BUTTON */
+
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: hsl(61, 70%, 52%);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+/* BOTTOM SECTION */
+
+.bottom_section{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(185, 40%, 17%);
+}
+.bottom_title{
+ color:  hsl(202, 86%, 94%);
+}
+
+.bottom_text_paragraph{
+ color: hsl(203, 41%, 72%);
+}
+
+.bottom_payment_card{
+    border-radius: 8px  ;
+    border-top: 2px solid hsl(61, 70%, 52%);
+    background-color:hsl(202, 55%, 16%) ;
+}
+.bottom_currency_amt{
+    color: hsl(61, 70%, 52%);
+}
+
+hr{
+    height: 0.2px;
+    background-color:hsl(200, 26%, 54%);
+    border: none;
+}
+.bottom_card_text{
+    color: hsl(203, 41%, 72%);
+}
+
