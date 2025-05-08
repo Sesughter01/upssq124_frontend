@@ -1,86 +1,136 @@
-<!-- HTML  -->
- <!-- HYPERTEXT MARKUP LANG -->
-
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 1 | Class 1</title>
-   <style>
-
-      html{
-         font-size: 24px;
-      } 
-       h2{
-          color: red;
-          font-size: 1.5rem;
-       }
-       .contain{
-         /* font-size: 8px; */
-       }
-       #para{
-         /* font-size: 1rem; */
-       }
-       
-        /* section{
-            padding-inline: 2rem;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Challenges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f2f2f2;
         }
-         .contain{
-            display: flex;
-            border: 1px solid blue;
+        .challenge {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
             border-radius: 8px;
-            
-         }
-         .currency{
-            background-color: red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            border-radius: 8px 0 0 8px;
-         }
-         .input{
-            border: none;
-            width:100%;
-            border-radius: 0 8px 8px 0;
-         }
-         .input:focus{
-            outline: none;
-         } */
-   </style> 
- </head>
- <body>
-    <section>
-         <header>
-             <div>
-                <a href="https://redux.js.org/introduction/getting-started"><h2>Logo</h2></a>
-             </div>
-             <nav>
-                 <ul>
-                     <li>
-                        <a href="./week_1/index.html">
+            box-shadow: 0 0 10px #ccc;
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-                            Home 
-                         </a>
-                     </li>
-                     <li>About </li>
-                     <li>Services </li>
-                     <li>Contact </li>
-                 </ul>
-             </nav>
-         </header>
-         <div class="contain">
-             <span class="currency">$</span>
-             <p id="para">Font Size</p>
-            <!-- <input type="text" placeholder="Enter Name" class="input"> -->
+    <div class="challenge">
+        <h2>Challenge 1: Even or Odd</h2>
+        <input type="number" id="evenOddInput" placeholder="Enter a number">
+        <button onclick="checkEvenOdd()">Check</button>
+        <div class="output" id="evenOddOutput"></div>
+    </div>
 
-         </div>
-    </section>
-  
-    <!-- <script src="./javascript_class/script1.js"></script> -->
-    <!-- <script src="./functions_js/script1.js"></script> -->
-    <script src="./objects_js/script2.js"></script>
-    
- </body>
- </html>
+    <div class="challenge">
+        <h2>Challenge 2: Grading System</h2>
+        <input type="number" id="gradeInput" placeholder="Enter score (0-100)">
+        <button onclick="checkGrade()">Check Grade</button>
+        <div class="output" id="gradeOutput"></div>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 3: Voting Eligibility</h2>
+        <input type="number" id="ageInput" placeholder="Enter age">
+        <button onclick="checkVoting()">Check Eligibility</button>
+        <div class="output" id="votingOutput"></div>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 4: Find the Largest Number</h2>
+        <input type="number" id="numA" placeholder="A">
+        <input type="number" id="numB" placeholder="B">
+        <input type="number" id="numC" placeholder="C">
+        <button onclick="findLargest()">Find Largest</button>
+        <div class="output" id="largestOutput"></div>
+    </div>
+
+    <div class="challenge">
+        <h2>Challenge 5: Simple Login System</h2>
+        <input type="text" id="usernameInput" placeholder="Username">
+        <input type="password" id="passwordInput" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <div class="output" id="loginOutput"></div>
+    </div>
+
+    <script>
+        function checkEvenOdd() {
+            let num = document.getElementById("evenOddInput").value;
+            let output = (num % 2 === 0) ? num + " is an even number." : num + " is an odd number.";
+            document.getElementById("evenOddOutput").textContent = output;
+        }
+
+        function checkGrade() {
+            let score = parseInt(document.getElementById("gradeInput").value);
+            let output = "";
+
+            if (score >= 90 && score <= 100) {
+                output = "Your grade is A.";
+            } else if (score >= 80 && score <= 89) {
+                output = "Your grade is B.";
+            } else if (score >= 70 && score <= 79) {
+                output = "Your grade is C.";
+            } else if (score >= 60 && score <= 69) {
+                output = "Your grade is D.";
+            } else if (score >= 0 && score < 60) {
+                output = "Your grade is F.";
+            } else {
+                output = "Invalid score.";
+            }
+
+            document.getElementById("gradeOutput").textContent = output;
+        }
+
+        function checkVoting() {
+            let age = document.getElementById("ageInput").value;
+            let output = (age >= 18) ? "You are eligible to vote." : "Sorry, you are not eligible to vote.";
+            document.getElementById("votingOutput").textContent = output;
+        }
+
+        function findLargest() {
+            let a = parseFloat(document.getElementById("numA").value);
+            let b = parseFloat(document.getElementById("numB").value);
+            let c = parseFloat(document.getElementById("numC").value);
+            let largest = a;
+
+            if (b >= largest) largest = b;
+            if (c >= largest) largest = c;
+
+            document.getElementById("largestOutput").textContent = largest + " is the largest number.";
+        }
+
+        function login() {
+            let username = document.getElementById("usernameInput").value;
+            let password = document.getElementById("passwordInput").value;
+
+            const correctUsername = "admin";
+            const correctPassword = "12345";
+
+            let output = (username === correctUsername && password === correctPassword)
+                ? "Login successful!" 
+                : "Invalid username or password.";
+
+            document.getElementById("loginOutput").textContent = output;
+        }
+    </script>
+</body>
+</html>
